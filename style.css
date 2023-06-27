@@ -1,0 +1,457 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    color: #fff;
+    font-family: 'poppins',sans empattement;
+    background-color: rgb(0, 0, 0);
+}
+
+/* debut barre menu */
+
+header {
+    position: relative;
+    width: 100%;
+    height: 8vh;
+    top: 0;
+    left: 0;
+    background-color: rgb(21, 21, 21);
+    color: white;
+    padding: 0 2rem;
+}
+
+nav {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 14px;
+    font-family: 'poppins', sans empattement;
+}
+
+h1 {
+    background: linear-gradient(90deg, rgb(145, 90, 90) 0%, rgb(45, 62, 254) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    width: 350px;
+    margin-right: 50px;
+}
+
+.menu li a {
+    color: white;
+    text-decoration: none;
+
+}
+
+.animenu:hover {
+    color: rgb(198, 60, 60);
+}
+
+/* fin barre menu */
+
+/* debut background 3D */
+
+.background3D {
+    background: rgb(0, 0, 0);
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+
+}
+
+.bulle {
+    position: relative;
+    display: flex;
+}
+
+.bulle span {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background: rgb(24, 55, 208);
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px rgba(10, 174, 229, 0.137), 0 0 50px rgb(204, 203, 203), 0 0 100px rgb(184, 35, 195);
+    animation: animate 15s linear infinite;
+    animation-duration: calc(125s / var(--i));
+}
+
+.bulle span:nth-child(even) {
+    background: #ff2d75;
+    box-shadow: 0 0 0 10px r#ff2d7544, 0 0 50px rgb(204, 203, 203), 0 0 100px rgb(184, 35, 195);
+    opacity: 50%;
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(100vh) scale(0);
+    }
+    100% {
+        transform: translateY(-10vh) scale(1);
+    }
+}
+
+/* fin background 3D */
+
+/* titre neon */
+
+.neon {
+    color: #fff;
+    position: absolute;
+    left: 38%;
+    top: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.neontext {
+    color: #fff;
+    text-shadow: 0 0 7px white, 0 0 10px white, 0 0 21px white, 0 0 42px #f09, 0 0 82px #f09, 0 0 92px #f09, 0 0 102px #f09, 0 0 151px #f09;
+}
+
+h2 {
+    font-size: 70px;
+    font-weight: 400;
+    line-height: 1;
+    animation: glow 0.50s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes glow {
+    100% {
+        text-shadow: 0 0 4px white, 0 0 11px white, 0 0 19px white, 0 0 40px #f09, 0 0 80px #f09, 0 0 90px #f09, 0 0 100px #f09, 0 0 150px #f09,;
+    }
+    0% {
+        text-shadow: 0 0 4px white, 0 0 10px white, 0 0 18px white, 0 0 38px #f09, 0 0 73px #f09, 0 0 80px #f09, 0 0 94px #f09, 0 0 140px #f09;
+    }
+
+}
+/* fin du titre neon */
+
+/* debut bouton 3D */
+
+.cvbouton {
+    color: #000000;
+    position: absolute;
+    left: 40%;
+    top: 69%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    width: 300px;
+    background-color: #ffffffbd;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    box-shadow: 0 0 60px 10px rgb(113, 21, 77);
+    padding: 20px 24px;
+}
+
+h3 {
+    font-family: 'poppins', sans empattement;
+}
+
+.cvbouton:hover {
+    transform: translateZ(50px);
+    box-shadow: 0 8px 80px 10px #ff0099;
+    cursor: pointer;
+}
+
+.cvbouton h3 a {
+    text-decoration: none;
+    color: #000000;
+}
+
+/* fin bouton 3D */
+
+/* 1er titre */
+
+.titre1 {
+    top: 700;
+    margin-left: 42%;
+    color: #fff;
+    position: absolute;
+    display: flex;
+    justify-content: inline;
+    align-items: center;
+}
+
+h4 {
+
+    font-size: 30px;
+    line-height: 1;
+    animation: glow 0.50s ease-in-out infinite alternate-reverse;
+}
+
+/* fin 1er titre */
+
+/* debut du 1er text */
+.textintro p {
+    padding: 3em;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+}
+
+section {
+    display: block;
+    max-width: 1000px;
+    margin: 0 auto 1em;
+    height: 200px;
+    position: relative;
+    border-right: 0.2em;
+    transform: preserve-3d;
+    margin-top: 100px;
+}
+
+/* fin du 1er text */
+
+/* debut tab etudes */
+
+.tabetude {
+    margin-left: 200px;
+    position: absolute;
+}
+
+.tabetude ol {
+    list-style: none;
+    width: 400px;
+}
+
+.tabetude ol li {
+    font-size: 1.2rem;
+    background: rgb(23,23,23);
+    margin: 10px 0;
+    padding: 20px 30px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.4s;
+    z-index: 5;
+}
+
+.tabetude ol li::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 5px;
+    background: blue;
+    transition: all 0.4s;
+    z-index: -1;
+}
+
+.tabetude ol li:hover::before {
+    width: 100%;
+}
+
+.tabetude ol li:hover {
+    transform: translateX(20px);
+}
+
+/* fin tab etude */
+
+/* debut tab pro */
+
+.tabepro {
+    margin-left: 850px;
+    position: absolute;
+}
+
+.tabepro ol {
+    list-style: none;
+    width: 400px;
+}
+
+.tabepro ol li {
+    font-size: 1.2rem;
+    background: rgb(23,23,23);
+    margin: 10px 0;
+    padding: 20px 30px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.4s;
+    z-index: 5;
+}
+
+.tabepro ol li::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 5px;
+    background: rgb(255, 0, 0);
+    transition: all 0.4s;
+    z-index: -1;
+}
+
+.tabepro ol li:hover::before {
+    width: 100%;
+}
+
+.tabepro ol li:hover {
+    transform: translateX(20px);
+}
+
+/* fin tab pro */
+
+/* bloc map */
+
+.titre3 {
+    margin-left: 45%;
+}
+
+.blocmap {
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    margin-left: 150px;
+}
+
+.bloccontact {
+    align-items: center;
+    top: 399.5%;
+    margin-left: 55%;
+    position: absolute;
+    border-radius: 20px;
+    height: 450px;
+    width: 500px;
+    border: 3px solid blue;
+    border-image: linear-gradient(to right, #c31432, #240b36);
+    border-image-slice: 1;
+    background: rgba(23, 23, 23, 0.693);
+}
+
+.bloccontact p {
+    text-align: center;
+    margin-top: 35%;
+
+}
+
+h6 {
+    margin-left: 71%;
+    font-size: 16px;
+}
+
+.tabecontact {
+    position: absolute;
+    margin-left: 120vh;
+    margin-top: 10vh;
+
+}
+
+.tabecontact ol {
+    list-style: none;
+    width: 400px;
+}
+
+.tabecontact ol li {
+    font-size: 1.2rem;
+    background: rgb(23,23,23);
+    margin: 10px 0;
+    padding: 20px 30px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.4s;
+    z-index: 5;
+}
+
+.tabecontact ol li::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 5px;
+    background: rgb(58, 202, 14);
+    transition: all 0.4s;
+    z-index: -1;
+}
+
+.tabecontact ol li:hover::before {
+    width: 100%;
+}
+
+.tabecontact ol li:hover {
+    transform: translateX(20px);
+}
+
+.totop {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    background: rgb(23,23,23);
+    bottom: 40px;
+    right: 50px;
+    text-decoration: none;
+    text-align: center;
+    line-height: 50px;
+    color: #fff;
+    font-size: 22px;
+    z-index: 10;
+}
+
+/*fin bloc contact */
+
+/* footer */
+
+footer {
+    position: relative;
+    width: 100%;
+    background: rgb(23,23,23);
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .socialicon {
+
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+footer .socialicon li {
+    list-style: none;
+}
+
+footer .socialicon li a {
+    font-size: 2em;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+footer .socialicon li a:hover {
+    transform: translateY(-10px);
+
+}
